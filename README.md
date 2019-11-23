@@ -1,2 +1,12 @@
-# echallenge-hackaton
+# eChallenge-Hackaton
+
 Repository created during the e-Challenge Hackaton to work on our be.IT web application.
+
+## Docker
+
+Development and production environment.
+The environment variables are not published here, peeps, you know what they are.
+
+## Mockups
+
+Made in Figma. Link <a href="">here</a>.

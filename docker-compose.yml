@@ -5,7 +5,7 @@ services:
   server:
     build:
       context: ./docker/server
-    container_name: becode-webserver
+    container_name: johnsons-webserver
     ports:
       - 80:80
     restart: always
@@ -14,25 +14,25 @@ services:
     env_file:
       - ./docker/docker.env
     networks:
-      - becode
+      - johnsons
 
   ## Mariadb service 
   database:
     image: mariadb:10.4.2
-    container_name: becode-database
+    container_name: johnsons-database
     restart: always
     volumes:
       - ./data:/docker-entrypoint-initdb.d
-      - becode_data:/var/lib/mysql
+      - johnsons_data:/var/lib/mysql
     env_file:
       - ./docker/docker.env
     networks:
-      - becode
+      - johnsons
 
   ## PhpMyAdmin
   myadmin:
     image: phpmyadmin/phpmyadmin:4.8.1
-    container_name: becode-phpmyadmin
+    container_name: johnsons-phpmyadmin
     ports:
       - 8081:80
     restart: always
@@ -41,10 +41,10 @@ services:
     depends_on:
       - database
     networks:
-      - becode
+      - johnsons
 
 networks:
-  becode:
+  johnsons:
 
 volumes:
-  becode_data:
+  johnsons_data:

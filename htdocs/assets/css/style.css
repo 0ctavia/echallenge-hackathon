@@ -1,0 +1,23 @@
+body {
+	background: #333;
+	padding: 0;
+	margin: auto;
+	height: 100%;
+	width: 100%;
+}
+
+iframe {
+	border: none;
+	display: block;
+	margin: auto;
+	height: 100vh;
+	min-width: 56.25vh;
+	background: url('../img/bg.png')
+}
+
+@media (orientation:portrait) {
+	iframe {
+		height: 100vh;
+		width: 100%;
+	}
+}
